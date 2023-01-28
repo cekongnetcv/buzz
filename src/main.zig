@@ -39,7 +39,7 @@ fn runFile(allocator: Allocator, file_name: []const u8, args: [][:0]u8, flavor: 
     };
     var imports = std.StringHashMap(Parser.ScriptImport).init(allocator);
     var vm = try VM.init(&gc, &import_registry, flavor == .Test);
-    try vm.initJIT();
+    if (BuildOptions.jit) try vm.initJIT();
     var parser = Parser.init(&gc, &imports, false);
     var codegen = CodeGen.init(&gc, &parser, flavor == .Test);
     defer {
