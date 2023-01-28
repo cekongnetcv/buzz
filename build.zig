@@ -224,7 +224,7 @@ pub fn build(b: *Builder) !void {
     var llibs = std.ArrayList([]const u8).init(std.heap.page_allocator);
     defer llibs.deinit();
 
-    sys_libs.appendSlice(&[_][]const u8{ "llvm", "pcre" }) catch unreachable;
+    sys_libs.appendSlice(&[_][]const u8{ "LLVM", "pcre","c" }) catch unreachable;
     if (build_options.use_mimalloc) {
         sys_libs.append("mimalloc") catch unreachable;
     }
