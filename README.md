@@ -48,7 +48,7 @@ export PATH="$BUZZ_PATH:$PATH"
 ```
 4. Build it: `zig build -Drelease-safe`
 5. Have fun: `buzz <myscript.buzz>`
-
+Note: this has  be tested under ubuntu20.04
 Additionnally, install the [VS Code extension](https://github.com/buzz-language/code) to get syntax highlighting. If you don't use VS Code but your editor supports [TextMate grammar files](https://github.com/buzz-language/code/blob/main/syntaxes/buzz.tmLanguage.json), you can use that.
 
 ## Quick tour
